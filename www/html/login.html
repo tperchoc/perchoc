@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function validateForm() {
+            var nom = document.getElementById("nom").value;
+            var prenom = document.getElementById("prenom").value;
+            var classe = document.getElementById("classe").value;
+            if (nom == "" || prenom == "" || classe == "") {
+                alert("Veuillez remplir tous les champs.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form action="login.php" method="post" onsubmit="return validateForm()">
+            <h2>Connexion</h2>
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+            <div class="form-group">
+                <label for="classe">Classe:</label>
+                <input type="text" id="classe" name="classe">
+            </div>
+            <input type="submit" value="Se connecter">
+        </form>
+    </div>
+</body>
+</html>
+
